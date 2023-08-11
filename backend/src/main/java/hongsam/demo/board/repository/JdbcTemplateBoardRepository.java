@@ -17,7 +17,7 @@ public class JdbcTemplateBoardRepository implements BoardRepository{
     @Override
     public void updateBoard(Long boardId, BoardUpdateDto updateParam) {
 
-        String sql = "update board set title = ?, content = ? where id = ?";
+        String sql = "update board set title = ?, content = ? where boardId = ?";
 
         template.update(sql,
                 updateParam.getTitle(),
@@ -28,7 +28,7 @@ public class JdbcTemplateBoardRepository implements BoardRepository{
     @Override
     public void deleteBoard(Long boardId) {
 
-        String sql = "delete from board where id = ?";
+        String sql = "delete from board where boardId = ?";
 
         template.update(sql, boardId);
     }
