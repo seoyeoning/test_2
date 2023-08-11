@@ -14,7 +14,9 @@ public class BoardController {
 
     @GetMapping
     public String home() {
+      
         return "성공!!!대성공";
+
     }
 
     @PatchMapping("/{boardId}")
