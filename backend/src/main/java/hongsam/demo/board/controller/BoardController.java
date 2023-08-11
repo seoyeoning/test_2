@@ -14,7 +14,7 @@ public class BoardController {
 
     @GetMapping
     public String home() {
-        return "웹훅 성공!!";
+        return "다시 테스트 1";
     }
 
     @PatchMapping("/{boardId}")
